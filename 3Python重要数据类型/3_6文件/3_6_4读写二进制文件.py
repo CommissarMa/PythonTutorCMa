@@ -1,0 +1,10 @@
+#3_6_3中讲述的文本文件的各种方法均可用于二进制文件，
+#区别在于：二进制文件读写的是bytes字符串。
+#下面的代码先以wb方式创建一个二进制文件，然后分别用r和rb方式打开读文件内容
+myfile=open('d:\\test3.txt','wb')#以wb方式打开二进制文件
+myfile.write('aaaaa')#出错，二进制文件只能写入bytes字符串
+myfile.write(b'aaaaa')#正确，将bytes字符串写入文件
+myfile.write(b'\nbbbb')
+myfile.close()#关闭文件
+myfile=open('d:\\test3.txt','r')#作为文本文件读
+print(myfile.read())

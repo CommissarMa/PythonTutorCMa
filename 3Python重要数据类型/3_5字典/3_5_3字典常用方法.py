@@ -32,3 +32,15 @@ x={'name':'John','age':25}
 x.popitem()#删除并返回键值对元组
 
 #setdefault
+x={'name':'John','age':25}
+x.setdefault('name')#返回指定键的映射值
+x.setdefault('sex')#键不存在，为字典添加键值对，映射值默认为None
+x.setdefault('phone','123456')#添加键值对
+
+#update
+#该方法用于为字典添加键值对。参数other可以是另一个字典或用
+#赋值格式表示的元组。若字典已存在同名的键，则映射值被覆盖。
+x={'name':'John','age':25}
+x.update({'age':30,'sex':'male'})#添加键值对，并覆盖同名键的映射值
+x.update(name='Mike')#修改映射值
+x.update(code=110,address='NewStreet')#添加键值对
